@@ -65,11 +65,13 @@ public class SearchServiceImpl {
 
 	public List<Object> renewParkPager(SearchFilterDTO dto,HttpServletRequest request) {
 		int cPage=dto.getcPage();
-		int numPerPage = 4; //한 페이지에 표시될 게시글 수
+		int numPerPage = 5; //한 페이지에 표시될 게시글 수
 		if(cPage==0) {cPage=1;}
 		
 		int totalPark = parkDAO.CountParkList(dto);
+		System.out.println(totalPark);
 		int totalPage = (int) Math.ceil((double) totalPark / numPerPage);
+		System.out.println(totalPage);
 		int pageBarSize = 5;
 		
 		// 시작페이지 no

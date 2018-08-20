@@ -182,7 +182,7 @@ public class UserServiceImpl {
 
 			// 날짜 차종
 			while (cal1.getTimeInMillis() <= cal2.getTimeInMillis()) {
-				int s = parkReserveDAO.confirmReserve(new ParkReserveDTO(sdf.format(cal1.getTime()), dto.getCarType()));
+				int s = parkReserveDAO.confirmReserve(new ParkReserveDTO(dto.getParkNo(),sdf.format(cal1.getTime()), dto.getCarType()));
 				System.out.println("예약수" + s);
 				if (s >= maxCar) {
 					result = "No";

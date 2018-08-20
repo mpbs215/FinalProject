@@ -28,7 +28,8 @@ public class ParkReserveDTO {
 		this.park = park;
 	}
 	
-	public ParkReserveDTO(String reserveStart,String carType) {
+	public ParkReserveDTO(int park_No,String reserveStart,String carType) {
+		this.parkNo = park_No;
 		this.reserveStart = reserveStart;
 		this.carType = carType;
 	}

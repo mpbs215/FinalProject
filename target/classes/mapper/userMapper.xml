@@ -72,9 +72,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		insert into park_reserve_tb values(reserve_seq.nextval,#{parkNo},#{userId},#{reserveStart},#{reserveEnd},#{carType})
 	</insert>
 	
-	<select id="confirmReserve" parameterType="string" resultType="int">
+	<select id="confirmReserve" parameterType="parkReserveDTO" resultType="int">
 		select count(*) from park_reserve_tb
-		where park_no=1 and car_Type=#{carType} and #{reserveStart} between reserve_Start and reserve_end
+		where park_no=#{parkNo} and car_Type=#{carType} and #{reserveStart} between reserve_Start and reserve_end
 	</select>
 	
 	<select id="selectMaxCar" parameterType="parkReserveDTO" resultType="int">

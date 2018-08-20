@@ -210,7 +210,7 @@
 			}
 		}
 		function pager(page){
-			if(page==null){page=1}
+			if(page==null){page=0}
 			var queryString = $("form[name=searchData]").serialize();
  			$.ajax({
 				url:"${pageContext.request.contextPath}/user/renewParkPager?cPage="+page,

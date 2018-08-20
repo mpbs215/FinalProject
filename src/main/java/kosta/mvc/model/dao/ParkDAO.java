@@ -96,8 +96,6 @@ public class ParkDAO {
 		List<ParkDTO> list = session.selectList("searchMapper.selectPark", dto, rowBounds);
 		return list;
 	}
-	
-	
 /*	public int sellerParkDelete(int parkNo) {
 		return session.delete("sellerMapper.deletePark", parkNo);
 	}

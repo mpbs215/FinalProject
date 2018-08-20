@@ -1,3 +1,5 @@
+INSERT INTO USER_INFO_TB (USER_ID, PASSWORD, USER_NAME, EMAIL, HP, ADDRESS, REGIDATE, SELLER) VALUES ('qwer','$2a$10$a2Pv8fXzaEsBjXDRzm3zbOuvgfcWvFeigRBDBjaKye9u.AV6YzRVa','관리자','mpbs215@naver.com','01093249483','서울 은평구 불광동 8-63',to_timestamp(sysdate, 'YYYY-MM-DD HH24:MI:SS'),'0');
+
 INSERT INTO USER_INFO_TB (USER_ID, PASSWORD, USER_NAME, EMAIL, HP, ADDRESS, REGIDATE, SELLER) VALUES ('seller','$2a$10$a2Pv8fXzaEsBjXDRzm3zbOuvgfcWvFeigRBDBjaKye9u.AV6YzRVa','공무원','mpbs215@naver.com','01093249482','서울 은평구 불광동 8-63',to_timestamp(sysdate, 'YYYY-MM-DD HH24:MI:SS'),'0');
 
 -- 1   행 삽입
@@ -1305,7 +1307,7 @@ insert into terms_tb values(TERMS_SEQ.NEXTVAL,'제 4 조 (약관 외 준칙)','
 
 insert into terms_tb values(TERMS_SEQ.NEXTVAL,'
 제 5 조 (이용신청)','
-①이용신청자가 회원가입 안내에서 본 약관과 개인정보보호정책에 동의하고 등록절차(회사의 소정 양식의 가입 신청서 작성)를 거쳐 '확인' 버튼을 누르면 이용신청을 할 수 있다.
+①이용신청자가 회원가입 안내에서 본 약관과 개인정보보호정책에 동의하고 등록절차(회사의 소정 양식의 가입 신청서 작성)를 거쳐 확인 버튼을 누르면 이용신청을 할 수 있다.
 ②이용신청자는 반드시 실명과 실제 정보를 사용해야 하며 1개의 생년월일에 대하여 1건의 이용신청을 할 수 있다.
 ③실명이나 실제 정보를 입력하지 않은 이용자는 법적인 보호를 받을 수 없으며, 서비스 이용에 제한을 받을 수 있다.
 ');
@@ -1334,7 +1336,7 @@ insert into terms_tb values(TERMS_SEQ.NEXTVAL,'제 8 조 (이용자의 의무)','
 ');
 insert into terms_tb values(TERMS_SEQ.NEXTVAL,'제 9 조 (서비스 이용)','
 ①이용자는 본 약관의 규정된 사항을 준수해 사이트를 이용한다.
-②본 약관에 명시되지 않은 서비스 이용에 관한 사항은 회사가 정해 '공지사항'에 게시하거나 또는 별도로 공지하는 내용에 따른다.
+②본 약관에 명시되지 않은 서비스 이용에 관한 사항은 회사가 정해 공지사항에 게시하거나 또는 별도로 공지하는 내용에 따른다.
 ');
 insert into terms_tb values(TERMS_SEQ.NEXTVAL,'제 10 조 (정보의 제공)','
 회사는 회원이 서비스 이용 중 필요하다고 인정되는 다양한 정보에 대하여 전자메일이나 서신우편 등의 방법으로 회원에게 정보를 제공할 수 있다.
@@ -1401,9 +1403,6 @@ insert into terms_tb values(TERMS_SEQ.NEXTVAL,'제 21 조 (분쟁의 해결)','
 ');
 
 insert into terms_tb values(TERMS_SEQ.NEXTVAL,'<부칙>','본 약관은 2018년 06월 31일부터 적용한다.');
-<<<<<<< HEAD
-
-=======
 
 --행 1
 INSERT INTO NOTICE_TB (NOTICE_NO, NOTICE_SUB, NOTICE_DT, NOTICE_CONTENT, NOTICE_HIT, NOTICE_IMAGE) VALUES (notice_seq.nextval,'PPL 위치기반서비스 이용약관 변경 안내new',sysdate,'안녕하세요. PPL 입니다.',0.0,null);
@@ -1438,9 +1437,6 @@ INSERT INTO QNA_TB (QNA_NO, USER_ID, QNA_SUB, QNA_CONTENT, QNA_DT, QNA_REVIEW, Q
 INSERT INTO QNA_TB (QNA_NO, USER_ID, QNA_SUB, QNA_CONTENT, QNA_DT, QNA_REVIEW, QNA_REVIEW_DT, QNA_HIT, QNA_PWD, QNA_IMAGE) VALUES (qna_seq.nextval,'qwer','도배도배14','도배도배14',sysdate,null,sysdate,0.0,1234.0,'');
 INSERT INTO QNA_TB (QNA_NO, USER_ID, QNA_SUB, QNA_CONTENT, QNA_DT, QNA_REVIEW, QNA_REVIEW_DT, QNA_HIT, QNA_PWD, QNA_IMAGE) VALUES (qna_seq.nextval,'qwer','도배도배15','도배도배15',sysdate,null,sysdate,0.0,1234.0,'');
 
-
-=======
->>>>>>> branch 'master' of https://github.com/mpbs215/finalProject
 --행 1
 INSERT INTO PARK_IMAGE_TB (IMG_NO, PARK_NO, IMG_PATH) VALUES (img_seq.nextval,2 ,'01.jpg');
 --행 2
@@ -1661,14 +1657,16 @@ INSERT INTO PARK_IMAGE_TB (IMG_NO, PARK_NO, IMG_PATH) VALUES (img_seq.nextval,10
 --행 59
 INSERT INTO PARK_IMAGE_TB (IMG_NO, PARK_NO, IMG_PATH) VALUES (img_seq.nextval,110,'109.jpg');
 
-insert into review_tb values('user3',3,5,'최고의 주차장입니다!')
-insert into review_tb values('user4',3,5,'넓직하네요')
-insert into review_tb values('user5',3,5,'마음에 듭니다.')
-insert into review_tb values('user6',3,5,'이 주차장은 이제 제겁니다.')
-insert into review_tb values('user7',3,4,'가성비 좋은듯')
-insert into review_tb values('user8',3,3,'그냥 딱 싼 가격에 쓸만한듯')
-insert into review_tb values('user9',3,2,'차라리 불법주차를 하지')
-insert into review_tb values('user10',3,1,'우리집 개집이 여기보단 넓겠다 ㅉㅉ')
-insert into review_tb values('user11',3,1,'주인 양심 무?')
+insert into review_tb values('user3',3,5,'최고의 주차장입니다!');
+insert into review_tb values('user4',3,5,'넓직하네요');
+insert into review_tb values('user5',3,5,'마음에 듭니다.');
+insert into review_tb values('user6',3,5,'이 주차장은 이제 제겁니다.');
+insert into review_tb values('user7',3,4,'가성비 좋은듯');
+insert into review_tb values('user8',3,3,'그냥 딱 싼 가격에 쓸만한듯');
+insert into review_tb values('user9',3,2,'차라리 불법주차를 하지');
+insert into review_tb values('user10',3,1,'우리집 개집이 여기보단 넓겠다 ㅉㅉ');
+insert into review_tb values('user11',3,1,'주인 양심 무?');
+
+update park_regist_tb set regi_start=regi_start+50,regi_end=regi_end+50
 
 commit
