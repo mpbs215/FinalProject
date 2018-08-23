@@ -22,7 +22,6 @@ import kosta.mvc.model.dao.ParkImgDAO;
 import kosta.mvc.model.dao.ParkReserveDAO;
 import kosta.mvc.model.dao.RegiDAO;
 import kosta.mvc.model.dao.ReviewDAO;
-import kosta.mvc.model.dao.SidogugundongriDAO;
 import kosta.mvc.model.dao.UserDAO;
 import kosta.mvc.model.dto.AuthorityDTO;
 import kosta.mvc.model.dto.CarTypeDTO;
@@ -32,7 +31,6 @@ import kosta.mvc.model.dto.ParkRegiDTO;
 import kosta.mvc.model.dto.ParkReserveDTO;
 import kosta.mvc.model.dto.ReviewDTO;
 import kosta.mvc.model.dto.TempKeyDTO;
-import kosta.mvc.model.dto.SidogugundongriDTO;
 import kosta.mvc.model.dto.UserDTO;
 
 @Service

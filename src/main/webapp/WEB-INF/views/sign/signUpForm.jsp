@@ -11,12 +11,39 @@
  <style>
 	span{color:white; width:100px; }
 	div{color:white;}
-	.signUp-Form { display:inline-block; text-align:center; width:400px; margin-left:460px; background:rgba(0,0,0,0.5);}
+	.signUp-Form { 
+		display:inline-block; 
+		text-align:center; 
+		width:400px; 
+		margin-left:33%;
+		background:rgba(0,0,0,0.5);
+	}
  </style>
  
 <script type="text/javascript">
+	// 주소 검색 팝업창 띄우기
+	function goPopup() {
+		// 호출된 페이지(jusopopup.jsp)에서 실제 주소검색URL(http://www.juso.go.kr/addrlink/addrCoordUrl.do)를 호출하게 됩니다.
+		var pop = window
+				.open(
+						"${pageContext.request.contextPath}/addrPopup?${_csrf.parameterName}=${_csrf.token}",
+						"pop",
+						"width=570,height=420, scrollbars=yes, resizable=yes");
+	}
+	
+	// 주소 입력
+	function jusoCallBack(roadFullAddr, roadAddrPart1, addrDetail,
+			roadAddrPart2, engAddr, jibunAddr, zipNo, admCd, rnMgtSn, bdMgtSn,
+			detBdNmList, bdNm, bdKdcd, siNm, sggNm, emdNm, liNm, rn, udrtYn,
+			buldMnnm, buldSlno, mtYn, lnbrMnnm, lnbrSlno, emdNo, entX, entY,
+			parameterName, token) {
+		// 팝업페이지에서 주소입력한 정보를 받아서, 현 페이지에 정보를 등록합니다.
+		var addr=document.getElementById("address");
+		addr.value = roadFullAddr;
+	}
 
 $(document).ready(function(){
+	
 	var checkResultId="";		
 	$("#signUpForm").submit(function(){			
 		if($("#signUpForm :input[name=userId]").val().trim()==""){
@@ -83,7 +110,7 @@ $(document).ready(function(){
 </head>
 
 <body>
-<div class="signUp-Form">
+<div class="signUp-Form" name="signUp-Form">
 <h2>User SignUp Form</h2><p>
 	<form method="post" action="${pageContext.request.contextPath}/sign/signUp" id="signUpForm">
 		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
@@ -93,7 +120,7 @@ $(document).ready(function(){
 		<div>E-Mail</div><div><input type="text" name="email"><br><br></div>
 		<div>HP : </div><div><input type="text" name="hp"><br><br></div>
 		<div>주차장 등록을 하기 위해서는 핸드폰 본인 인증을 하셔야 합니다.</div>
-		<div>ADDRESS : </div><div><input type="text" name="address"><br><br></div>
+		<div>ADDRESS : </div><div><input type="text" name="address" id="address" onclick="goPopup();"/><br><br></div>
 		 <input type="hidden" name="regidate"><br>
 		<div>User_Type</div><input type="hidden" value="0" name="seller"><p>
 		<input type="submit" value="회원가입하기">
