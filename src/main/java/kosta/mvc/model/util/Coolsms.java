@@ -1,7 +1,6 @@
 package kosta.mvc.model.util;
 
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Properties;
 
 import org.json.simple.JSONObject;

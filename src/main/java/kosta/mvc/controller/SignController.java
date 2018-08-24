@@ -160,13 +160,13 @@ public class SignController {
 		 * Parameters 관련정보 : http://www.coolsms.co.kr/SDK_Java_API_Reference_ko#toc-0
 		 */
 		
-		HashMap<String, String> set = new HashMap<String, String>();
-		set.put("to", hp); // 수신번호
-		set.put("from", "01048524897"); // 발신번호
-		set.put("text", "안녕하세요 이재문 입니다. 인증번호는 [" + key + "] 입니다."); // 문자내용
-		set.put("type", "sms"); // 문자 타입
+		HashMap<String, String> smsSet = new HashMap<String, String>();
+		smsSet.put("to", hp); // 수신번호
+		smsSet.put("from", "01048524897"); // 발신번호
+		smsSet.put("text", "안녕하세요 이재문 입니다. 인증번호는 [" + key + "] 입니다."); // 문자내용
+		smsSet.put("type", "sms"); // 문자 타입
 
-		JSONObject result = coolsms.send(set); // 보내기&전송결과받기
+		JSONObject result = coolsms.send(smsSet); // 보내기&전송결과받기
 		if ((boolean) result.get("status") == true) {
 			// 메시지 보내기 성공 및 전송결과 출력
 			System.out.println("성공");
